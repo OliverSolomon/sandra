@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Heart, BookOpen, Church, Briefcase } from "lucide-react";
+import Reveal from "./Reveal";
 
 const pillars = [
   {
@@ -30,14 +31,14 @@ export default function About() {
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Section header */}
-        <div className="text-center mb-16">
+        <Reveal className="text-center mb-16">
           <p className="text-xs uppercase tracking-[0.2em] text-stone-400 font-sans mb-3">Her Story</p>
           <h2 className="text-3xl md:text-4xl font-serif text-gray-900">Biography</h2>
           <div className="w-10 h-px bg-stone-300 mx-auto mt-4" />
-        </div>
+        </Reveal>
 
         {/* Portrait + opening paragraphs */}
-        <div className="grid md:grid-cols-5 gap-14 items-start mb-20">
+        <Reveal className="grid md:grid-cols-5 gap-14 items-start mb-20">
           <div className="md:col-span-2 flex justify-center">
             <div className="relative w-72 aspect-[3/4]">
               <div className="absolute -inset-2 border border-stone-200/80 rounded-sm pointer-events-none" />
@@ -70,29 +71,30 @@ export default function About() {
               To her, family was never defined by titles alone, but by love, care, and being present for one another. Her familiar Kikuyu greeting — <em className="text-gray-600">&ldquo;No ngeithi? Na muhana atia na ciana? Mageithie muno&rdquo;</em> — reflected her warmth and genuine concern for all those around her. She was the family&rsquo;s communication hub, ensuring everyone was informed, included, and connected.
             </p>
           </div>
-        </div>
+        </Reveal>
 
         {/* Four pillars */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          {pillars.map(({ icon: Icon, title, text }) => (
-            <div key={title} className="bg-[#f9f7f4] rounded-sm border border-stone-100 p-6 space-y-3">
-              <div className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-stone-200/70">
+          {pillars.map(({ icon: Icon, title, text }, i) => (
+            <Reveal key={title} delay={i * 70}
+              className="group bg-[#f9f7f4] rounded-sm border border-stone-100 p-6 space-y-3 transition-shadow duration-500 hover:shadow-[0_12px_36px_-16px_rgba(0,0,0,0.18)]">
+              <div className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-stone-200/70 transition-colors duration-300 group-hover:bg-stone-300/80">
                 <Icon className="w-4 h-4 text-stone-600" />
               </div>
               <h3 className="font-serif text-gray-900 text-lg">{title}</h3>
               <p className="text-sm text-gray-600 font-sans leading-relaxed">{text}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
 
         {/* Scripture centrepiece */}
-        <div className="max-w-2xl mx-auto text-center border-t border-b border-stone-200 py-12">
+        <Reveal className="max-w-2xl mx-auto text-center border-t border-b border-stone-200 py-12">
           <span className="text-5xl font-serif text-stone-200 leading-none select-none">&ldquo;</span>
           <p className="text-xl md:text-2xl font-serif text-gray-700 italic -mt-3 mb-4 leading-relaxed">
             Honor her for all that her hands have done, and let her works bring her praise at the city gates.
           </p>
           <p className="text-xs text-stone-400 font-sans uppercase tracking-widest">Proverbs 31:31</p>
-        </div>
+        </Reveal>
 
       </div>
     </section>

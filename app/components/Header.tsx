@@ -9,7 +9,7 @@ export default function Header() {
     { href: "/#about", label: "Biography" },
     { href: "/#service", label: "Service Details" },
     { href: "/eulogy", label: "The Eulogy" },
-    { href: "/#gallery", label: "Gallery" },
+    { href: "/gallery", label: "Gallery" },
     { href: "/#tributes", label: "Tributes" },
     { href: "/#contribute", label: "Contribute" },
   ];

@@ -60,3 +60,43 @@ Safiri Salama. Tutaonana baadaye.',
   false,
   '2026-06-09 11:30:00+03'
 );
+
+-- Additional tributes from family (as attached). Dated after the service so they
+-- surface at the top of the tribute wall.
+INSERT INTO public.tributes (name, message, is_anonymous, created_at) VALUES
+(
+  'The Mwaniki Family',
+  'Mama Njambi, it is difficult to put into words how much you meant to us as the Mwaniki family. You were more than a big sister and an auntie — you were a constant presence in our lives, a pillar of support, and one of our greatest cheerleaders. Whenever there was an event in the family, we could always count on you to arrive a day or two before the big day. Those preparation nights became some of our most treasured memories, filled with laughter, storytelling, and endless conversations. We talked about everything: politics, current trends in our lives, family matters, and your fascinating stories about life in the mid-90s. Those moments brought us together and made every occasion special.
+
+We cannot think of a single major transition in the lives of the Mwanikis that did not have your fingerprints on it. From graduations and canon installations to retirement celebrations and countless other milestones, you were always there. You served faithfully in planning committees, attended meetings, offered ideas, and ensured that every event was a success. Your dedication to family was unmatched, and your willingness to give your time and energy for the happiness of others was truly inspiring.
+
+One tradition that will forever remain close to our hearts was the Mwanikis Nairobi Dinner. Your residence became our gathering place, and you never tired of reminding — or rather, hustling — us to make it happen. Looking back, we are grateful for your persistence, because those gatherings strengthened our bonds and created memories that we will cherish forever. You understood the importance of family unity and worked tirelessly to keep us connected.
+
+Mama Njambi, thank you for being our biggest fan and for championing our happiness. Thank you for celebrating our achievements, encouraging us through challenges, and always believing in us. Your love, warmth, and unwavering support left a lasting mark on all of us.
+
+Though your seat among us is now empty, your spirit, your laughter, and the memories we shared will remain alive in our hearts. We will miss your presence, your stories, your guidance, and your love. Thank you for everything you did for the Mwanikis. Your legacy of family, unity, and selfless love will continue to inspire us for generations to come. Rest in eternal peace, Mama Njambi. You will forever be loved, remembered, and deeply missed.',
+  false,
+  '2026-06-12 09:00:00+03'
+),
+(
+  'Brothers & Sisters',
+  'Today, as we gather to say goodbye, we choose not just to mourn but to celebrate you. You had a great impact in our lives in different ways, and we cherish the memories we created. We are so proud to be your siblings, but you have been snatched from our midst too soon. We wish we had more time together.
+
+Even when life got busy, the bond we shared never faded. We did not need constant contact to feel close. You were always there, offering your support and sharing life experiences together. Sometimes you were the peacemaker when we disagreed as siblings. After the demise of our mother, you became our second mum. Your generosity was of another level. We remember you as our family Chief Whip, organizing events and forcing many of us to attend. We don''t remember you getting angry at anything; you were easy at many times, even with the challenges of life — you lived each day at a time.
+
+You also supported your youngest siblings like your own children; we never worried that they were left young. How we wish you could have lived to tell us some of your early life secrets that you kept to your heart. Saying goodbye to you, our dear sister, feels impossible. The world feels void and confusing, but we will hold and cherish the memories we shared together that bring your presence into our lives forever.
+
+We shall love you today, tomorrow, and forever. Fare thee well, our dear sister, till we meet again. Rest in Eternal Peace.',
+  false,
+  '2026-06-12 10:00:00+03'
+),
+(
+  'Loise',
+  'They say you don''t choose your family, but you can choose your friends. God allowed me to choose Mary, and I would choose her again and again, forever. Mary was not just a friend; she was a sister by choice. Today, death feels so final, but for you, Mary, I know this is not the end.
+
+The same Christ whom you served so faithfully has welcomed you into heaven. May the choirs of angels receive you. May the Son of God say to you, "Well done, my faithful servant; come to me and rest."
+
+Until we meet again in God''s presence, sleep well, my sister and friend.',
+  false,
+  '2026-06-12 11:00:00+03'
+);

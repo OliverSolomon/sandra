@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight, Loader2 } from "lucide-react";
 import TributeCard from "./TributeCard";
+import Reveal from "./Reveal";
 
 interface Tribute { id: string; name: string; message: string; photo_url: string | null; is_anonymous: boolean; created_at: string; }
 interface Pagination { page: number; limit: number; total: number; totalPages: number; }
@@ -43,11 +44,11 @@ export default function TributesList() {
     <section id="tributes-list" className="py-24 bg-[#f9f7f4]">
       <div className="max-w-4xl mx-auto px-6">
 
-        <div className="text-center mb-14">
+        <Reveal className="text-center mb-14">
           <p className="text-xs uppercase tracking-[0.2em] text-stone-400 font-sans mb-3">Words of Love</p>
           <h2 className="text-3xl md:text-4xl font-serif text-gray-900">Tributes</h2>
           <div className="w-10 h-px bg-stone-300 mx-auto mt-4" />
-        </div>
+        </Reveal>
 
         {loading && !tributes.length ? (
           <div className="flex flex-col items-center py-16 gap-3">
@@ -70,8 +71,10 @@ export default function TributesList() {
         ) : (
           <>
             <div className="space-y-5">
-              {tributes.map((t) => (
-                <TributeCard key={t.id} name={t.name} date={fmt(t.created_at)} message={t.message} photoUrl={t.photo_url || undefined} isAnonymous={t.is_anonymous} />
+              {tributes.map((t, i) => (
+                <Reveal key={t.id} as="div" delay={Math.min(i * 50, 300)}>
+                  <TributeCard name={t.name} date={fmt(t.created_at)} message={t.message} photoUrl={t.photo_url || undefined} isAnonymous={t.is_anonymous} />
+                </Reveal>
               ))}
             </div>
 

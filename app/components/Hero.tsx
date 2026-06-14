@@ -52,12 +52,12 @@ export default function Hero() {
 
             <div className="pt-2 flex flex-wrap gap-4 justify-center md:justify-start">
               <a href="/eulogy"
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-gray-900 text-white rounded-sm text-sm font-medium tracking-wide hover:bg-gray-800 transition-colors shadow-md">
+                className="pressable inline-flex items-center gap-2 px-7 py-3.5 bg-gray-900 text-white rounded-sm text-sm font-medium tracking-wide hover:bg-gray-800 transition-colors shadow-md">
                 <BookOpen className="w-4 h-4" />
                 Read the Eulogy
               </a>
               <a href="#tributes"
-                className="inline-flex items-center gap-2 px-7 py-3.5 border border-stone-300 text-gray-700 rounded-sm text-sm font-medium tracking-wide hover:bg-stone-50 transition-colors">
+                className="pressable inline-flex items-center gap-2 px-7 py-3.5 border border-stone-300 text-gray-700 rounded-sm text-sm font-medium tracking-wide hover:bg-stone-50 transition-colors">
                 <MessageSquare className="w-4 h-4" />
                 Leave a Tribute
               </a>

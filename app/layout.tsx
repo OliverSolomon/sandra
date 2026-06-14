@@ -34,6 +34,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={`${playfairDisplay.variable} ${inter.variable} antialiased`}>
+        <div className="grain-overlay" aria-hidden="true" />
         <Header />
         {children}
       </body>

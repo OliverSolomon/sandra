@@ -64,8 +64,10 @@ export default function TributeForm({ onTributeSubmitted }: Props) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: form.isAnonymous ? null : form.name.trim(), message: form.message, isAnonymous: form.isAnonymous, photoUrl: userPhoto }),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Failed to submit tribute");
+      const raw = await res.text();
+      let data: { error?: string } = {};
+      try { data = raw ? JSON.parse(raw) : {}; } catch { /* non-JSON response (e.g. HTML error page) */ }
+      if (!res.ok) throw new Error(data.error || `Submission failed (HTTP ${res.status}). Please try again later.`);
       setSuccess(true);
       setForm({ name: user ? (user.user_metadata?.full_name || user.user_metadata?.name || user.email?.split("@")[0] || "") : "", message: "", isAnonymous: false });
       onTributeSubmitted?.();

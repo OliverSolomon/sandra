@@ -47,8 +47,10 @@ export default function FloatingTributeButton() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: form.isAnonymous ? null : form.name.trim(), message: form.message.trim(), isAnonymous: form.isAnonymous, photoUrl: user?.user_metadata?.avatar_url || user?.user_metadata?.picture || null }),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Failed to submit");
+      const raw = await res.text();
+      let data: { error?: string } = {};
+      try { data = raw ? JSON.parse(raw) : {}; } catch { /* non-JSON response (e.g. HTML error page) */ }
+      if (!res.ok) throw new Error(data.error || `Submission failed (HTTP ${res.status}). Please try again later.`);
       setSuccess(true);
       setForm({ name: user ? (user.user_metadata?.full_name || user.user_metadata?.name || user.email?.split("@")[0] || "") : "", message: "", isAnonymous: false });
       const w = window as unknown as Record<string, (() => void) | unknown>;

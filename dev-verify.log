@@ -94,3 +94,7 @@
  GET / 200 in 42ms (compile: 7ms, render: 35ms)
  GET / 200 in 40ms (compile: 7ms, render: 33ms)
  GET / 200 in 220ms (compile: 141ms, render: 79ms)
+ GET / 200 in 420ms (compile: 7ms, render: 414ms)
+ GET /api/gallery 200 in 1296ms (compile: 30ms, render: 1266ms)
+ GET /api/tributes?page=1&limit=10 200 in 1332ms (compile: 213ms, render: 1120ms)
+ ✓ Compiled in 1146ms

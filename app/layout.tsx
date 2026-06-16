@@ -26,7 +26,7 @@ const SITE_URL =
       : "http://localhost:3000");
 const TITLE = "In Loving Memory: Sandra Cheptoo Mugun";
 const DESCRIPTION =
-  "Celebrating the life and legacy of Sandra Cheptoo Mugun (Sandy) — 3 January 2002 to 5 June 2026. Read her eulogy, share a tribute, and view treasured photographs.";
+  "In loving memory of Sandra Cheptoo Mugun (Sandy), 2002–2026 — a celebration of her life, faith, and joy.";
 const OG_IMAGE = {
   url: "/og-image.jpg",
   width: 1200,

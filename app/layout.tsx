@@ -15,7 +15,15 @@ const inter = Inter({
   weight: ["400", "500", "600"],
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+// Resolve the canonical site origin so social scrapers fetch an absolute image URL.
+// Priority: explicit env → Vercel production domain → Vercel preview/deploy URL → localhost.
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "http://localhost:3000");
 const TITLE = "In Loving Memory: Sandra Cheptoo Mugun";
 const DESCRIPTION =
   "Celebrating the life and legacy of Sandra Cheptoo Mugun (Sandy) — 3 January 2002 to 5 June 2026. Read her eulogy, share a tribute, and view treasured photographs.";
@@ -23,6 +31,7 @@ const OG_IMAGE = {
   url: "/og-image.jpg",
   width: 1200,
   height: 630,
+  type: "image/jpeg",
   alt: "A Celebration of Life — Sandra Cheptoo Mugun, 3 January 2002 to 5 June 2026.",
 };
 
@@ -49,6 +58,9 @@ export const metadata: Metadata = {
     images: [OG_IMAGE.url],
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

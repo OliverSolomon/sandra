@@ -98,3 +98,4 @@
  GET /api/gallery 200 in 1296ms (compile: 30ms, render: 1266ms)
  GET /api/tributes?page=1&limit=10 200 in 1332ms (compile: 213ms, render: 1120ms)
  ✓ Compiled in 1146ms
+ ✓ Compiled in 2.4s

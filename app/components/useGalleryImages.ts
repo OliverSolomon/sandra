@@ -1,11 +1,12 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { fallbackImages, type GalleryImage } from "@/lib/photos";
+import { fallbackImages, videosFirst, type GalleryImage } from "@/lib/photos";
 
-/** Fetches gallery images from the API, falling back to the curated local set. */
+/** Fetches gallery images from the API, falling back to the curated local set.
+ *  Videos are always surfaced before photos. */
 export function useGalleryImages() {
-  const [images, setImages] = useState<GalleryImage[]>(fallbackImages);
+  const [images, setImages] = useState<GalleryImage[]>(() => videosFirst(fallbackImages));
   const [loading, setLoading] = useState(true);
 
   const fetchImages = useCallback(async () => {
@@ -13,9 +14,10 @@ export function useGalleryImages() {
       setLoading(true);
       const res = await fetch("/api/gallery");
       const data = await res.json();
-      setImages(res.ok && data.images?.length > 0 ? data.images : fallbackImages);
+      const next = res.ok && data.images?.length > 0 ? data.images : fallbackImages;
+      setImages(videosFirst(next));
     } catch {
-      setImages(fallbackImages);
+      setImages(videosFirst(fallbackImages));
     } finally {
       setLoading(false);
     }

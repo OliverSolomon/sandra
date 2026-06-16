@@ -3,8 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Plus } from "lucide-react";
-import { getUrl } from "@/lib/photos";
+import { ArrowUpRight, Plus, Play } from "lucide-react";
+import { getUrl, isVideo } from "@/lib/photos";
 import { useGalleryImages } from "./useGalleryImages";
 import Lightbox from "./Lightbox";
 import PhotoUploadModal from "./PhotoUploadModal";
@@ -41,7 +41,7 @@ export default function Gallery() {
               onClick={() => setIsUploadOpen(true)}
               className="pressable group inline-flex w-max items-center gap-2.5 rounded-full bg-[#3f1f2c] py-2.5 pl-5 pr-2.5 font-sans text-sm font-medium tracking-wide text-white transition-colors hover:bg-[#56293b]"
             >
-              Share a Photo
+              Share a Memory
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/15 transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                 <Plus className="h-3.5 w-3.5" />
               </span>
@@ -74,13 +74,29 @@ export default function Gallery() {
                     onClick={() => setSelectedIndex(idx)}
                     className="group relative h-full w-full overflow-hidden rounded-lg bg-[#f6e6ec] shadow-[0_1px_2px_rgba(0,0,0,0.04)] ring-1 ring-black/[0.04] transition-shadow duration-500 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.25)]"
                   >
-                    <Image
-                      src={getUrl(img)}
-                      alt={img.alt}
-                      fill
-                      className="object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.06]"
-                      sizes="(max-width: 768px) 50vw, 25vw"
-                    />
+                    {isVideo(img) ? (
+                      <>
+                        <video
+                          src={getUrl(img)}
+                          muted
+                          playsInline
+                          preload="metadata"
+                          className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.06]"
+                        />
+                        <span className="pointer-events-none absolute left-1/2 top-1/2 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-black/40 backdrop-blur-sm ring-1 ring-white/40 transition-transform duration-300 group-hover:scale-110">
+                          <Play className="ml-0.5 h-5 w-5 fill-white text-white" />
+                        </span>
+                      </>
+                    ) : (
+                      <Image
+                        src={getUrl(img)}
+                        alt={img.alt}
+                        fill
+                        unoptimized
+                        className="object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.06]"
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                      />
+                    )}
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-black/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                     <p className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-2 p-3 text-left font-sans text-[11px] leading-snug text-white/95 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-y-0 group-hover:opacity-100">
                       {img.alt}

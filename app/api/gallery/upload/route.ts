@@ -12,12 +12,21 @@ export async function POST(request: NextRequest) {
 
     if (!file) return NextResponse.json({ error: "No file provided" }, { status: 400 });
 
-    const validTypes = ["image/jpeg", "image/png", "image/webp", "image/jpg"];
-    if (!validTypes.includes(file.type))
-      return NextResponse.json({ error: "Only JPEG, PNG, or WebP are allowed." }, { status: 400 });
+    const imageTypes = ["image/jpeg", "image/png", "image/webp", "image/jpg"];
+    const videoTypes = ["video/mp4", "video/webm", "video/quicktime", "video/ogg"];
+    const isVideo = videoTypes.includes(file.type);
+    if (!imageTypes.includes(file.type) && !isVideo)
+      return NextResponse.json(
+        { error: "Only images (JPEG, PNG, WebP) or videos (MP4, WebM, MOV) are allowed." },
+        { status: 400 }
+      );
 
-    if (file.size > 10 * 1024 * 1024)
-      return NextResponse.json({ error: "File too large. Max 10 MB." }, { status: 400 });
+    const maxBytes = isVideo ? 50 * 1024 * 1024 : 10 * 1024 * 1024;
+    if (file.size > maxBytes)
+      return NextResponse.json(
+        { error: `File too large. Max ${isVideo ? "50" : "10"} MB.` },
+        { status: 400 }
+      );
 
     const fileExt = file.name.split(".").pop();
     const fileName = `${userId}-${Date.now()}.${fileExt}`;

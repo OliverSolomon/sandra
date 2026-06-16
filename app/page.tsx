@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Hero from "./components/Hero";
+import MemorialVideo from "./components/MemorialVideo";
 import About from "./components/About";
 import ServiceDetails from "./components/ServiceDetails";
 import Gallery from "./components/Gallery";
@@ -26,6 +27,7 @@ export default function Home() {
     <>
       <main>
         <Hero />
+        <MemorialVideo />
         <About />
         <ServiceDetails />
         <Gallery />

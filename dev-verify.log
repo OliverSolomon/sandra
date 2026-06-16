@@ -5,92 +5,60 @@
 [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
    ▲ Next.js 16.0.3 (Turbopack)
    - Local:         http://localhost:3000
-   - Network:       http://172.31.32.1:3000
+   - Network:       http://10.79.109.112:3000
    - Environments: .env.local
 
  ✓ Starting...
- ✓ Ready in 4.6s
+ ✓ Ready in 2.4s
  ○ Compiling / ...
- GET / 200 in 17.5s (compile: 15.8s, render: 1767ms)
- GET / 200 in 197ms (compile: 15ms, render: 182ms)
- GET /api/gallery 200 in 3.6s (compile: 1884ms, render: 1696ms)
-Error fetching tributes: {
-  code: 'PGRST205',
-  details: null,
-  hint: null,
-  message: "Could not find the table 'public.tributes' in the schema cache"
-}
- GET /api/tributes?page=1&limit=10 500 in 3.6s (compile: 1985ms, render: 1607ms)
- GET /gallery 200 in 829ms (compile: 711ms, render: 118ms)
- GET /api/gallery 200 in 461ms (compile: 14ms, render: 446ms)
- GET /api/gallery 200 in 318ms (compile: 25ms, render: 294ms)
- GET /api/gallery 200 in 602ms (compile: 6ms, render: 596ms)
-Error fetching tributes: {
-  code: 'PGRST205',
-  details: null,
-  hint: null,
-  message: "Could not find the table 'public.tributes' in the schema cache"
-}
- GET /api/tributes?page=1&limit=10 500 in 633ms (compile: 31ms, render: 601ms)
-Error fetching tributes: {
-  code: 'PGRST205',
-  details: null,
-  hint: null,
-  message: "Could not find the table 'public.tributes' in the schema cache"
-}
- GET /api/tributes?page=1&limit=10 500 in 809ms (compile: 22ms, render: 787ms)
- GET /api/gallery 200 in 287ms (compile: 24ms, render: 263ms)
- GET / 200 in 43ms (compile: 11ms, render: 32ms)
- GET / 200 in 43ms (compile: 5ms, render: 37ms)
- GET / 200 in 60ms (compile: 9ms, render: 51ms)
- GET / 200 in 33ms (compile: 5ms, render: 27ms)
- GET /eulogy 200 in 666ms (compile: 490ms, render: 176ms)
- GET / 200 in 52ms (compile: 11ms, render: 41ms)
-Error fetching tributes: {
-  code: 'PGRST205',
-  details: null,
-  hint: null,
-  message: "Could not find the table 'public.tributes' in the schema cache"
-}
- GET /api/tributes?page=1&limit=10 500 in 548ms (compile: 91ms, render: 456ms)
- GET /api/gallery 200 in 574ms (compile: 16ms, render: 558ms)
-Error fetching tributes: {
-  code: 'PGRST205',
-  details: null,
-  hint: null,
-  message: "Could not find the table 'public.tributes' in the schema cache"
-}
- GET /api/tributes?page=1&limit=10 500 in 454ms (compile: 21ms, render: 433ms)
- GET /api/gallery 200 in 272ms (compile: 14ms, render: 258ms)
- ✓ Compiled in 293ms
- GET / 200 in 9.8s (compile: 8.0s, render: 1779ms)
- GET /api/gallery 200 in 2.6s (compile: 420ms, render: 2.2s)
- GET /api/tributes?page=1&limit=10 200 in 2.4s (compile: 418ms, render: 2.0s)
- ○ Compiling /api/gallery/upload ...
-C:\Users\Oliver\Desktop\sandra\.next\dev\server\chunks\node_modules_a2fbc8c1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-Upload error: Error [StorageApiError]: new row violates row-level security policy
-    at ignore-listed frames {
-  __isStorageError: true,
-  namespace: 'storage',
-  status: 400,
-  statusCode: '403'
-}
- POST /api/gallery/upload 500 in 31.7s (compile: 29.2s, render: 2.6s)
-C:\Users\Oliver\Desktop\sandra\.next\dev\server\chunks\node_modules_a2fbc8c1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-Upload error: Error [StorageApiError]: new row violates row-level security policy
-    at ignore-listed frames {
-  __isStorageError: true,
-  namespace: 'storage',
-  status: 400,
-  statusCode: '403'
-}
- POST /api/gallery/upload 500 in 1248ms (compile: 8ms, render: 1240ms)
-C:\Users\Oliver\Desktop\sandra\.next\dev\server\chunks\node_modules_a2fbc8c1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-Upload error: Error [StorageApiError]: new row violates row-level security policy
-    at ignore-listed frames {
-  __isStorageError: true,
-  namespace: 'storage',
-  status: 400,
-  statusCode: '403'
-}
- POST /api/gallery/upload 500 in 2.9s (compile: 1434ms, render: 1419ms)
+ GET / 200 in 13.1s (compile: 11.9s, render: 1244ms)
+ GET / 200 in 13.3s (compile: 10.2s, render: 3.1s)
+ ○ Compiling /api/gallery ...
+ GET /api/gallery 200 in 9.0s (compile: 8.2s, render: 838ms)
+ GET /api/tributes?page=1&limit=10 200 in 9.0s (compile: 7.2s, render: 1766ms)
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586901649.jpeg resolved to private ip ["64:ff9b::6812:260a","64:ff9b::ac40:95f6"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586901363.jpeg resolved to private ip ["64:ff9b::6812:260a","64:ff9b::ac40:95f6"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586901429.jpeg resolved to private ip ["64:ff9b::6812:260a","64:ff9b::ac40:95f6"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586900752.jpeg resolved to private ip ["64:ff9b::6812:260a","64:ff9b::ac40:95f6"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586900197.jpeg resolved to private ip ["64:ff9b::6812:260a","64:ff9b::ac40:95f6"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586899920.jpeg resolved to private ip ["64:ff9b::6812:260a","64:ff9b::ac40:95f6"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586899659.jpeg resolved to private ip ["64:ff9b::6812:260a","64:ff9b::ac40:95f6"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586899467.jpeg resolved to private ip ["64:ff9b::6812:260a","64:ff9b::ac40:95f6"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586898714.jpeg resolved to private ip ["64:ff9b::6812:260a","64:ff9b::ac40:95f6"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586898839.jpeg resolved to private ip ["64:ff9b::6812:260a","64:ff9b::ac40:95f6"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586898172.jpeg resolved to private ip ["64:ff9b::6812:260a","64:ff9b::ac40:95f6"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586897495.jpeg resolved to private ip ["64:ff9b::6812:260a","64:ff9b::ac40:95f6"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586896848.jpeg resolved to private ip ["64:ff9b::6812:260a","64:ff9b::ac40:95f6"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586894681.jpeg resolved to private ip ["64:ff9b::6812:260a","64:ff9b::ac40:95f6"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586893925.jpeg resolved to private ip ["64:ff9b::6812:260a","64:ff9b::ac40:95f6"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586894112.jpeg resolved to private ip ["64:ff9b::6812:260a","64:ff9b::ac40:95f6"]
+ GET / 200 in 175ms (compile: 8ms, render: 167ms)
+ GET /api/tributes?page=1&limit=10 200 in 583ms (compile: 70ms, render: 513ms)
+ GET /api/gallery 200 in 1083ms (compile: 41ms, render: 1041ms)
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586901649.jpeg resolved to private ip ["64:ff9b::ac40:95f6","64:ff9b::6812:260a"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586901429.jpeg resolved to private ip ["64:ff9b::ac40:95f6","64:ff9b::6812:260a"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586901363.jpeg resolved to private ip ["64:ff9b::ac40:95f6","64:ff9b::6812:260a"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586900752.jpeg resolved to private ip ["64:ff9b::ac40:95f6","64:ff9b::6812:260a"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586900197.jpeg resolved to private ip ["64:ff9b::ac40:95f6","64:ff9b::6812:260a"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586899920.jpeg resolved to private ip ["64:ff9b::ac40:95f6","64:ff9b::6812:260a"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586899659.jpeg resolved to private ip ["64:ff9b::ac40:95f6","64:ff9b::6812:260a"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586899467.jpeg resolved to private ip ["64:ff9b::ac40:95f6","64:ff9b::6812:260a"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586898714.jpeg resolved to private ip ["64:ff9b::ac40:95f6","64:ff9b::6812:260a"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586898839.jpeg resolved to private ip ["64:ff9b::ac40:95f6","64:ff9b::6812:260a"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586898172.jpeg resolved to private ip ["64:ff9b::ac40:95f6","64:ff9b::6812:260a"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586897495.jpeg resolved to private ip ["64:ff9b::ac40:95f6","64:ff9b::6812:260a"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586896848.jpeg resolved to private ip ["64:ff9b::ac40:95f6","64:ff9b::6812:260a"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586894681.jpeg resolved to private ip ["64:ff9b::ac40:95f6","64:ff9b::6812:260a"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586893925.jpeg resolved to private ip ["64:ff9b::ac40:95f6","64:ff9b::6812:260a"]
+ ⨯ upstream image https://nqohjfljgnzyjqbhypmr.supabase.co/storage/v1/object/public/gallery-photos/anonymous-1781586894112.jpeg resolved to private ip ["64:ff9b::ac40:95f6","64:ff9b::6812:260a"]
+ ✓ Compiled in 365ms
+ GET /api/gallery 200 in 470ms (compile: 12ms, render: 458ms)
+ ✓ Compiled in 266ms
+ ✓ Compiled in 371ms
+ ✓ Compiled in 362ms
+ GET / 200 in 649ms (compile: 117ms, render: 533ms)
+ GET / 200 in 206ms (compile: 11ms, render: 195ms)
+ GET /api/gallery 200 in 1067ms (compile: 9ms, render: 1058ms)
+ GET /api/tributes?page=1&limit=10 200 in 1089ms (compile: 32ms, render: 1058ms)
+ POST /api/gallery/upload 200 in 35.5s (compile: 458ms, render: 35.0s)
+ GET /api/gallery 200 in 492ms (compile: 29ms, render: 463ms)

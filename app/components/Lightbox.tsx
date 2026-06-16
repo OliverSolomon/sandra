@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import { getUrl, type GalleryImage } from "@/lib/photos";
+import { getUrl, isVideo, type GalleryImage } from "@/lib/photos";
 
 interface Props {
   images: GalleryImage[];
@@ -71,15 +71,26 @@ export default function Lightbox({ images, index, onClose, onIndexChange }: Prop
         className="lb-figure relative flex h-full max-h-[90vh] w-full max-w-6xl flex-col items-center justify-center"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="relative h-full w-full">
-          <Image
-            src={getUrl(current)}
-            alt={current.alt}
-            fill
-            className="object-contain"
-            sizes="100vw"
-            priority
-          />
+        <div className="relative flex h-full w-full items-center justify-center">
+          {isVideo(current) ? (
+            <video
+              src={getUrl(current)}
+              controls
+              autoPlay
+              playsInline
+              className="max-h-full max-w-full rounded-sm object-contain"
+            />
+          ) : (
+            <Image
+              src={getUrl(current)}
+              alt={current.alt}
+              fill
+              unoptimized
+              className="object-contain"
+              sizes="100vw"
+              priority
+            />
+          )}
         </div>
         <figcaption className="pointer-events-none absolute bottom-3 left-1/2 max-w-[90%] -translate-x-1/2 rounded-full bg-black/45 px-4 py-2 text-center text-xs font-sans tracking-wide text-white/85">
           {current.alt}

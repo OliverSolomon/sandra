@@ -69,3 +69,14 @@ export const fallbackImages: GalleryImage[] = [
 ];
 
 export const getUrl = (img: GalleryImage) => img.public_url || img.src;
+
+const VIDEO_EXT = /\.(mp4|webm|ogg|ogv|mov|m4v)(\?|#|$)/i;
+
+/** True when the gallery item is a video file (detected by URL extension). */
+export const isVideo = (img: GalleryImage) => VIDEO_EXT.test(getUrl(img));
+
+/** Stable sort that surfaces videos before photos, preserving prior order. */
+export const videosFirst = (imgs: GalleryImage[]): GalleryImage[] => [
+  ...imgs.filter(isVideo),
+  ...imgs.filter((i) => !isVideo(i)),
+];

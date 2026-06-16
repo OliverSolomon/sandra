@@ -80,10 +80,10 @@ export default function TributeForm({ onTributeSubmitted }: Props) {
       <div className="max-w-2xl mx-auto px-6">
 
         <div className="text-center mb-12">
-          <p className="text-xs uppercase tracking-[0.2em] text-stone-400 font-sans mb-3">Share Your Memory</p>
-          <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-4">Leave a Tribute</h2>
-          <div className="w-10 h-px bg-stone-300 mx-auto mb-4" />
-          <p className="text-stone-500 font-sans text-sm max-w-md mx-auto leading-relaxed">
+          <p className="text-xs uppercase tracking-[0.2em] text-[#b98ba0] font-sans mb-3">Share Your Memory</p>
+          <h2 className="text-3xl md:text-4xl font-serif text-[#3f1f2c] mb-4">Leave a Tribute</h2>
+          <div className="w-10 h-px bg-[#dca7bf] mx-auto mb-4" />
+          <p className="text-[#9c6f82] font-sans text-sm max-w-md mx-auto leading-relaxed">
             Share your memories, thoughts, or condolences. Your tribute will be published immediately and will be a source of comfort to the family.
           </p>
         </div>
@@ -93,7 +93,7 @@ export default function TributeForm({ onTributeSubmitted }: Props) {
             <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
             <div>
               <p className="font-medium text-green-900 font-sans text-sm">Your tribute has been submitted</p>
-              <p className="text-xs text-green-700 font-sans mt-0.5">Thank you for sharing your memory of Mary.</p>
+              <p className="text-xs text-green-700 font-sans mt-0.5">Thank you for sharing your memory of Sandra.</p>
             </div>
           </div>
         )}
@@ -105,32 +105,32 @@ export default function TributeForm({ onTributeSubmitted }: Props) {
           </div>
         )}
 
-        <div className="border border-stone-100 rounded-sm shadow-sm overflow-hidden">
+        <div className="border border-[#f1dde6] rounded-sm shadow-sm overflow-hidden">
           {/* Auth banner */}
           {user ? (
-            <div className="bg-stone-50 px-7 py-4 border-b border-stone-100 flex items-center gap-4">
+            <div className="bg-[#fbf2f6] px-7 py-4 border-b border-[#f1dde6] flex items-center gap-4">
               {userPhoto && (
-                <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-stone-200 flex-shrink-0">
+                <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-[#e8cdd9] flex-shrink-0">
                   <Image src={userPhoto} alt="Profile" fill className="object-cover" />
                 </div>
               )}
               <div className="flex-1">
-                <p className="font-medium text-gray-900 font-sans text-sm">{user.user_metadata?.full_name || user.user_metadata?.name || user.email}</p>
-                <p className="text-xs text-stone-400 font-sans">{user.email}</p>
+                <p className="font-medium text-[#3f1f2c] font-sans text-sm">{user.user_metadata?.full_name || user.user_metadata?.name || user.email}</p>
+                <p className="text-xs text-[#b98ba0] font-sans">{user.email}</p>
               </div>
               <button type="button" onClick={() => supabase.auth.signOut()}
-                className="text-xs text-stone-500 hover:text-gray-900 font-sans transition-colors">
+                className="text-xs text-[#9c6f82] hover:text-[#8c3f63] font-sans transition-colors">
                 Sign out
               </button>
             </div>
           ) : (
-            <div className="bg-stone-50 px-7 py-4 border-b border-stone-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div className="bg-[#fbf2f6] px-7 py-4 border-b border-[#f1dde6] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div>
-                <p className="text-sm font-medium text-gray-800 font-sans">Sign in for a verified tribute</p>
-                <p className="text-xs text-stone-500 font-sans">Optional — use your Google name and photo.</p>
+                <p className="text-sm font-medium text-[#3f1f2c] font-sans">Sign in for a verified tribute</p>
+                <p className="text-xs text-[#9c6f82] font-sans">Optional — use your Google name and photo.</p>
               </div>
               <button type="button" onClick={handleSignIn} disabled={authLoading}
-                className="inline-flex items-center gap-2 px-4 py-2 border border-stone-300 bg-white text-gray-700 rounded-sm text-xs font-medium hover:bg-stone-50 transition-colors disabled:opacity-50">
+                className="inline-flex items-center gap-2 px-4 py-2 border border-[#dca7bf] bg-white text-gray-700 rounded-sm text-xs font-medium hover:bg-[#fbf2f6] transition-colors disabled:opacity-50">
                 {authLoading ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : (
                   <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" aria-hidden="true">
                     <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
@@ -148,35 +148,35 @@ export default function TributeForm({ onTributeSubmitted }: Props) {
             {!form.isAnonymous && (
               <div>
                 <label htmlFor="name" className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-2 font-sans">
-                  Your Name <span className="text-stone-400 font-normal normal-case tracking-normal">(required)</span>
+                  Your Name <span className="text-[#b98ba0] font-normal normal-case tracking-normal">(required)</span>
                 </label>
                 <input type="text" id="name" name="name" required={!form.isAnonymous} value={form.name} onChange={handleChange} disabled={!!user}
-                  className="w-full px-4 py-3 border border-stone-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-gray-400 disabled:bg-stone-50 font-sans text-gray-900 text-sm transition-colors"
+                  className="w-full px-4 py-3 border border-[#e8cdd9] rounded-sm focus:outline-none focus:ring-1 focus:ring-[#cf9bb2] focus:border-[#cf9bb2] disabled:bg-[#fbf2f6] font-sans text-[#3f1f2c] text-sm transition-colors"
                   placeholder="Enter your full name" />
               </div>
             )}
 
             <div>
               <label htmlFor="message" className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-2 font-sans">
-                Your Tribute <span className="text-stone-400 font-normal normal-case tracking-normal">(required)</span>
+                Your Tribute <span className="text-[#b98ba0] font-normal normal-case tracking-normal">(required)</span>
               </label>
               <textarea id="message" name="message" required rows={7} value={form.message} onChange={handleChange}
-                className="w-full px-4 py-3 border border-stone-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-gray-400 resize-none font-sans text-gray-900 text-sm leading-relaxed transition-colors"
+                className="w-full px-4 py-3 border border-[#e8cdd9] rounded-sm focus:outline-none focus:ring-1 focus:ring-[#cf9bb2] focus:border-[#cf9bb2] resize-none font-sans text-[#3f1f2c] text-sm leading-relaxed transition-colors"
                 placeholder="Share your memories, thoughts, or condolences&hellip;" />
-              <p className="mt-1.5 text-xs text-stone-400 font-sans text-right">{form.message.length} / 5000</p>
+              <p className="mt-1.5 text-xs text-[#b98ba0] font-sans text-right">{form.message.length} / 5000</p>
             </div>
 
-            <div className="flex items-start gap-3 p-4 bg-stone-50 rounded-sm border border-stone-100">
+            <div className="flex items-start gap-3 p-4 bg-[#fbf2f6] rounded-sm border border-[#f1dde6]">
               <input type="checkbox" id="isAnonymous" name="isAnonymous" checked={form.isAnonymous} onChange={handleChange}
-                className="mt-0.5 w-4 h-4 text-gray-700 border-stone-300 rounded" />
+                className="mt-0.5 w-4 h-4 text-gray-700 border-[#dca7bf] rounded" />
               <label htmlFor="isAnonymous" className="flex-1 text-sm text-gray-700 font-sans cursor-pointer">
                 <span className="font-medium">Publish anonymously</span>
-                <span className="block mt-0.5 text-stone-400 text-xs">Your name will not be displayed publicly.</span>
+                <span className="block mt-0.5 text-[#b98ba0] text-xs">Your name will not be displayed publicly.</span>
               </label>
             </div>
 
             <button type="submit" disabled={submitting || !form.message.trim() || (!form.isAnonymous && !form.name.trim())}
-              className="w-full py-3.5 px-6 bg-gray-900 text-white rounded-sm font-medium text-sm tracking-wide hover:bg-gray-800 transition-colors disabled:opacity-50 flex items-center justify-center gap-2">
+              className="w-full py-3.5 px-6 bg-[#3f1f2c] text-white rounded-sm font-medium text-sm tracking-wide hover:bg-[#56293b] transition-colors disabled:opacity-50 flex items-center justify-center gap-2">
               {submitting ? (
                 <>
                   <Loader2 className="w-4 h-4 animate-spin" />

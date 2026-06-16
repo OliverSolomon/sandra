@@ -16,16 +16,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "In Loving Memory: Mary Wanjiku Chege (Mama Njambi)",
-  description: "A memorial site honouring the life and legacy of Mary Wanjiku Chege, affectionately known as Mama Njambi. 23 February 1958 – 1 June 2026.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  title: "In Loving Memory: Sandra Cheptoo Mugun",
+  description: "A memorial site celebrating the life and legacy of Sandra Cheptoo Mugun, affectionately known as Sandy. 3 January 2002 – 5 June 2026.",
   openGraph: {
-    title: "In Loving Memory: Mary Wanjiku Chege (Mama Njambi)",
-    description: "A memorial site honouring the life and legacy of Mary Wanjiku Chege, affectionately known as Mama Njambi.",
+    title: "In Loving Memory: Sandra Cheptoo Mugun",
+    description: "A memorial site celebrating the life and legacy of Sandra Cheptoo Mugun, affectionately known as Sandy.",
     images: [{
-      url: "https://res.cloudinary.com/djiqwujg4/image/upload/v1780859632/mary-wanjiku-chege_yzkqml.jpg",
-      width: 1200,
-      height: 630,
-      alt: "Mary Wanjiku Chege",
+      url: "/sandra-portrait.jpg",
+      width: 994,
+      height: 1405,
+      alt: "Sandra Cheptoo Mugun",
     }],
   },
 };

@@ -26,20 +26,20 @@ export default function Gallery() {
           {/* Header */}
           <Reveal className="mb-14 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="mb-3 font-sans text-[11px] uppercase tracking-[0.25em] text-stone-400">
+              <p className="mb-3 font-sans text-[11px] uppercase tracking-[0.25em] text-[#b98ba0]">
                 Memories
               </p>
-              <h2 className="font-serif text-3xl text-gray-900 md:text-4xl">
+              <h2 className="font-serif text-3xl text-[#3f1f2c] md:text-4xl">
                 A Life in Photographs
               </h2>
-              <div className="mt-4 h-px w-10 bg-stone-300" />
-              <p className="mt-5 max-w-md font-sans text-sm leading-relaxed text-stone-500">
+              <div className="mt-4 h-px w-10 bg-[#dca7bf]" />
+              <p className="mt-5 max-w-md font-sans text-sm leading-relaxed text-[#9c6f82]">
                 The moments we hold closest — gathered here in loving remembrance.
               </p>
             </div>
             <button
               onClick={() => setIsUploadOpen(true)}
-              className="pressable group inline-flex w-max items-center gap-2.5 rounded-full bg-gray-900 py-2.5 pl-5 pr-2.5 font-sans text-sm font-medium tracking-wide text-white transition-colors hover:bg-gray-800"
+              className="pressable group inline-flex w-max items-center gap-2.5 rounded-full bg-[#3f1f2c] py-2.5 pl-5 pr-2.5 font-sans text-sm font-medium tracking-wide text-white transition-colors hover:bg-[#56293b]"
             >
               Share a Photo
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/15 transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
@@ -52,7 +52,7 @@ export default function Gallery() {
           {loading ? (
             <div className="grid auto-rows-[180px] grid-cols-2 gap-3 md:grid-cols-4">
               {[...Array(8)].map((_, i) => (
-                <div key={i} className="animate-pulse rounded-lg bg-stone-100" />
+                <div key={i} className="animate-pulse rounded-lg bg-[#f6e6ec]" />
               ))}
             </div>
           ) : (
@@ -72,7 +72,7 @@ export default function Gallery() {
                 >
                   <button
                     onClick={() => setSelectedIndex(idx)}
-                    className="group relative h-full w-full overflow-hidden rounded-lg bg-stone-100 shadow-[0_1px_2px_rgba(0,0,0,0.04)] ring-1 ring-black/[0.04] transition-shadow duration-500 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.25)]"
+                    className="group relative h-full w-full overflow-hidden rounded-lg bg-[#f6e6ec] shadow-[0_1px_2px_rgba(0,0,0,0.04)] ring-1 ring-black/[0.04] transition-shadow duration-500 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.25)]"
                   >
                     <Image
                       src={getUrl(img)}
@@ -95,11 +95,11 @@ export default function Gallery() {
           <Reveal className="mt-12 flex justify-center">
             <Link
               href="/gallery"
-              className="group inline-flex items-center gap-2 font-sans text-sm font-medium tracking-wide text-gray-700 transition-colors hover:text-gray-900"
+              className="group inline-flex items-center gap-2 font-sans text-sm font-medium tracking-wide text-gray-700 transition-colors hover:text-[#8c3f63]"
             >
               View the full gallery
               {images.length > HOME_LIMIT && (
-                <span className="text-stone-400">({images.length})</span>
+                <span className="text-[#b98ba0]">({images.length})</span>
               )}
               <ArrowUpRight className="h-4 w-4 transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>

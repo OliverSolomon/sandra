@@ -3,9 +3,9 @@ import GalleryFull from "./GalleryFull";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Gallery — In Loving Memory of Mary Wanjiku Chege",
+  title: "Gallery — In Loving Memory of Sandra Cheptoo Mugun",
   description:
-    "A gallery of cherished photographs honouring the life of Mary Wanjiku Chege, affectionately known as Mama Njambi.",
+    "A gallery of cherished photographs celebrating the life of Sandra Cheptoo Mugun, affectionately known as Sandy.",
 };
 
 export default function GalleryPage() {

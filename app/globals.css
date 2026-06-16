@@ -1,8 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #1a1a1a;
+  /* ---------- Premium pink palette (replaces beige/stone) ---------- */
+  --background: #fdf8fa;   /* blush-white page */
+  --foreground: #2e1b23;   /* warm plum-ink text */
+
+  --blush: #f9edf1;        /* soft section wash */
+  --blush-soft: #fbf2f6;   /* faint inset / hover */
+  --blush-deep: #f3dde7;   /* deeper blush */
+  --ink: #3f1f2c;          /* deep plum-wine — buttons, headings */
+  --ink-hover: #56293b;
+  --ink-deepest: #2a131c;  /* footer */
+  --rose: #b0567c;         /* rose accent */
+  --rose-deep: #8c3f63;
+  --line: #f1dde6;         /* hairline border */
+  --line-strong: #e3c2d0;
+  --muted: #b98ba0;        /* light mauve labels */
+  --muted-strong: #9c6f82;
+
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
 
@@ -25,12 +40,22 @@ body {
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
 }
 
+/* ---------- Premium pink hero / banner background ---------- */
+.bg-hero-blush {
+  background-color: #fbeef3;
+  background-image:
+    radial-gradient(120% 80% at 78% 8%, rgba(176, 86, 124, 0.16) 0%, rgba(176, 86, 124, 0) 55%),
+    radial-gradient(90% 70% at 12% 100%, rgba(243, 221, 231, 0.9) 0%, rgba(243, 221, 231, 0) 60%),
+    linear-gradient(180deg, #fbeef3 0%, #f8e6ee 45%, #fdf8fa 100%);
+}
+.bg-blush { background-color: var(--blush); }
+
 .font-serif { font-family: var(--font-serif), Georgia, serif; }
 .font-sans  { font-family: var(--font-sans), system-ui, -apple-system, sans-serif; }
 
 html { scroll-behavior: smooth; }
 
-*:focus-visible { outline: 2px solid #6b7280; outline-offset: 2px; }
+*:focus-visible { outline: 2px solid var(--rose); outline-offset: 2px; }
 
 /* ---------- Editorial film-grain (fixed, never repaints on scroll) ---------- */
 .grain-overlay {

@@ -1,102 +1,120 @@
--- Run this in your Supabase SQL editor to seed the tributes from the official funeral programme.
--- These are real tributes delivered at the service on 9th June 2026.
+-- Run this in your Supabase SQL editor to seed the tributes for Sandra Cheptoo Mugun.
+-- These are drawn from the official funeral programme and tributes booklet.
 
 INSERT INTO public.tributes (name, message, is_anonymous, created_at) VALUES
 (
-  'Brenda Muthoni (Bre)',
-  'If love had a face in our family, it was my grandmother. If faith had a voice, it was hers in prayer. My grandmother was a woman of deep love, strong faith, and quiet grace. She had a vibrant spirit, a warm sense of humor, and a presence that naturally drew people to her. She gave generously, loved deeply, and always showed up for the people she cared about. To me, she was more than a grandmother — she was my guardian, my mentor, and one of my greatest blessings. She guided me through every stage of my life, encouraged me, and believed in me even when I didn''t believe in myself. I will always be grateful that I was raised and loved by her.
+  'David Kimeli Mugun (Dad)',
+  'To my one and only daughter, Sandra. Though you are physically gone from us, you are ever present in our hearts. And much as your daily phone calls that often started with, "Hi Dad, how was your day?", will no longer happen, your loving spirit will always call on us to keep spreading your love for Christ, family and friends in keeping with your candor and enviable simplicity.
 
-We shared a special bond through fashion. I will always remember her elegant outfits, beautiful wigs, and signature purple lipstick. She carried herself with confidence and grace, and she passed that sense of beauty and expression on to me. Most importantly, she was the spiritual pillar of our family. She introduced us to Christ and led us through prayer and unwavering faith.
+Your honesty emanated from deep inside your clean heart and was plain for all who interacted with you to see. From testimonies of you as shared by many, I concede that indeed, it was a privilege bestowed on me by God to be His steward over you for 24 years. How else can I explain the positive impact you''ve had on the many people that encountered you? Teachers, pastors, colleagues, relatives and friends all found that you manifested the gifts and fruits of the Holy Spirit.
 
-My heart is heavy that she is gone, but I am grateful for the time I had with her. I wish she could have stayed long enough to see me get married, just as she always hoped. But I find peace knowing she is resting. Her love, faith, and strength will live on through us. Grandma, thank you for every prayer, every lesson, every laugh, and every sacrifice. I love you, always and forever. Fly high with the Angels my love. Until we meet again.',
+While with us, our mistake was that we never put all these people in one room to help shed light on who Sandra really was. A beautiful soul. Go well till we meet again.',
   false,
-  '2026-06-09 10:30:00+03'
+  '2026-06-16 09:00:00+03'
 ),
 (
-  'Shiku (Evalyne Wanjiku)',
-  'Today, we gather with heavy hearts and deep gratitude as we celebrate the life of our beloved grandmother, Mary Wanjiku Chege. It is painful to say goodbye, but we are thankful for the gift of her life, her love, and her faith.
+  'Jane Kariuki (Mum)',
+  'There are moments in life that leave us searching for words, moments when the heart carries emotions too deep to be expressed by language alone. Today, as I stand to honor and remember my beloved daughter Sandra Cheptoo, I find myself in such a moment.
 
-Grandma Mary was a woman of strong faith and quiet strength. She loved God deeply and lived her life in a way that reflected that faith — through kindness, generosity, and care for those around her. She had a way of making people feel at home. Whether family or visitor, you felt welcomed, seen, and valued in her presence. Her home carried warmth, laughter, and peace. She was also graceful and elegant, always carrying herself with dignity and confidence. But beyond how she looked, what we will remember most is her heart — gentle, attentive, and full of love.
+Sandra was a shining light in every sense of the word. From the moment she entered our lives, she brought joy, laughter, and a depth of love that words can scarcely capture. Her smile could lift a room, and her kindness touched everyone who had the privilege of knowing her. She approached the world with courage and a strong belief in God. She diligently served in the worship ministry and never missed her Saturday praise and worship practice.
 
-For me, some of my most cherished memories are the times I would visit her when life felt overwhelming. Being with her felt like stepping into peace. She would prepare my favourite meals — gojagutuu, maize meal pancakes, and chapati — and in those simple moments, she gave me something deeper than food. She gave me comfort, care, and belonging.
+Above all else, Sandra loved God. Her faith was not merely something she spoke about; it was something she lived. She found joy in worship and comfort in God''s presence. Sandra loved swimming and found freedom in water; watching her swim was like watching someone completely at peace. She loved skating and horse riding, a passion that reflected her fearless spirit. She was truly a woman of courage and resilience, and she taught me that strength is not measured by the absence of difficulties but by the courage to keep moving forward despite them.
 
-She was more than a grandmother to me. She was a friend, a listener, and a safe place. She offered wisdom without judgment and encouragement when I needed it most. As we mourn her, we also honour the life she lived and the love she gave so freely. Her faith, her strength, and her kindness will continue to live through all of us.
-
-Grandma Mary, thank you for your prayers, your love, your guidance, and your sacrifice. I will carry you with me always. We take comfort in knowing you are resting in eternal peace with the Lord you served so faithfully. You will always be loved, forever remembered, and deeply missed.
-
-"The righteous are remembered forever."',
+On June 5th when I went to wake Sandra up to go to school at around 4.40am, I found her non-responsive in her bed. My dear, words can never express how much you meant to me; you were loved beyond measure, cherished beyond words and treasured beyond imagination. May your beautiful soul rest in eternal peace.',
   false,
-  '2026-06-09 10:45:00+03'
+  '2026-06-16 09:05:00+03'
 ),
 (
-  'Christine Njambi',
-  'Today I celebrate you, Mum. A life filled with sacrifice, strength, and kindness. You gave without limits, loved without conditions, and cared without expecting anything in return. Your strength carried us through many seasons, and your love made even the hardest days bearable.
+  'Glenn Kipkemboi (Brother)',
+  'Today, I remember and celebrate my sister, a person whose life was filled with laughter, love, determination, and unforgettable moments that will remain with us forever.
 
-Everything good in me began with you. Your love shaped my life in ways I will always carry. I take comfort in knowing that you are resting in God''s eternal embrace. You ran your race with grace, love, and strength. Your prayers and love will always guide my steps every day.
+She had a special gift for asking the funniest and most unexpected questions. She also had the ambitious dream of having ten children one day, a goal that always left us wondering who on earth has that much time, energy, and patience! Yet she spoke about it with such confidence and excitement that you couldn''t help but laugh and admire her enthusiasm.
 
-Until we meet again. Rest in perfect peace, dearest Mum.',
+What made her truly special was her sense of humor. No matter how upset you might have been, it was almost impossible to stay angry with her for long. She was also incredibly creative, transforming simple materials into beautiful beadwork, and a woman of strong faith who remained committed to church and to her beliefs.
+
+But perhaps what I will miss most are the simple moments that revealed her loving heart. She would hug me unexpectedly and tell me she loved me. She wanted to see me succeed, to thrive, and to become the best version of myself. Rest peacefully, dear sister. You are deeply loved, dearly missed, and forever remembered.',
   false,
-  '2026-06-09 11:00:00+03'
+  '2026-06-16 09:10:00+03'
 ),
 (
-  'Rosemary Njambi',
-  'Today we gather here to celebrate an extraordinary woman. Her love was unconditional, her kindness endless, and her strength remarkable. She had a special way of making everyone feel loved and welcomed.
+  'Amani Wambui (Cousin)',
+  'Some people pass through this world quietly, leaving only a faint trace behind. And then there are people like Sandra, whose presence fills every room they enter, whose laughter lingers long after they have gone. She did not need to be loud to be felt. She simply arrived with her warmth, her quirks, her openness, and the room was better for it.
 
-I am forever grateful for every lesson she taught me, every moment she sacrificed as we grew up under her care, and every moment we spent together. Her memory will continue to guide me throughout my life. Thank you for everything — thank you for your love and guidance. You will be deeply missed, forever loved, and never forgotten.
+Her mornings were never complete without tea. There was something deeply Sandra about the ritual of it: the warmth, the patience, and the quiet comfort of a cup held in both hands. And then there were her passions: singing, dancing, cooking, and swimming. She sang the way she felt like singing. She danced the way her body moved. She cooked with instinct, boldness, and a complete disregard for what anyone else might expect, and in her mind the Sandra version was always the better one.
 
-May you rest in eternal peace, Amen.',
+She paid attention to everyone. Morning, noon, or the still hours of the night, if she encountered you, she stopped, she looked at you, she asked how you were, and she meant it. We search the sky in this time, and the butterflies respond. Rest well, Sandra. You did life beautifully and entirely your own way.',
   false,
-  '2026-06-09 11:15:00+03'
+  '2026-06-15 18:00:00+03'
 ),
 (
-  'Edward Chege',
-  'My dear, as you always called me — it is hard to believe that you have left us. Though you leave behind countless memories and lessons, you also leave us with the belief that everything in this world is possible. We must continue pushing forward.
+  'Sifa Wanjira (Cousin)',
+  'Sandra was the kind of person you did not realize you needed until she was already part of your life, and then you could not imagine it without her. She moved through the world with a warmth that felt effortless and a personality that belonged to no one but her.
 
-Slightly over 41 years ago, when my mum, Njambi, brought me into this world at such a tender age, you took me in as one of your own children. You played a significant role in shaping my life during my younger years, which has contributed immensely to the person I am today. Indeed, you played a major part in shaping the lives of the majority — if not all — of Mzee''s children. On behalf of the Chege family, I say thank you. We shall forever remain indebted to you.
-
-As we lay you to rest, we do so not only in sorrow, but also in gratitude for a life so purposefully and meaningfully lived. Your love, guidance, wisdom, and generosity will continue to live on in all of us. You shall be deeply missed.
-
-Safiri Salama. Tutaonana baadaye.',
+Animals were drawn to Sandra, and she to them, in the way that only the gentlest souls seem to attract creatures who sense something safe and true. I had been afraid of dogs for the longest time, but Sandra always kept the dogs away from me until I was comfortable. I will always remember how she cared for me. A hello from Sandra carried weight. It told you that you mattered. Fly free, Sandra. We shall meet again at God''s feet.',
   false,
-  '2026-06-09 11:30:00+03'
-);
-
--- Additional tributes from family (as attached). Dated after the service so they
--- surface at the top of the tribute wall.
-INSERT INTO public.tributes (name, message, is_anonymous, created_at) VALUES
-(
-  'The Mwaniki Family',
-  'Mama Njambi, it is difficult to put into words how much you meant to us as the Mwaniki family. You were more than a big sister and an auntie — you were a constant presence in our lives, a pillar of support, and one of our greatest cheerleaders. Whenever there was an event in the family, we could always count on you to arrive a day or two before the big day. Those preparation nights became some of our most treasured memories, filled with laughter, storytelling, and endless conversations. We talked about everything: politics, current trends in our lives, family matters, and your fascinating stories about life in the mid-90s. Those moments brought us together and made every occasion special.
-
-We cannot think of a single major transition in the lives of the Mwanikis that did not have your fingerprints on it. From graduations and canon installations to retirement celebrations and countless other milestones, you were always there. You served faithfully in planning committees, attended meetings, offered ideas, and ensured that every event was a success. Your dedication to family was unmatched, and your willingness to give your time and energy for the happiness of others was truly inspiring.
-
-One tradition that will forever remain close to our hearts was the Mwanikis Nairobi Dinner. Your residence became our gathering place, and you never tired of reminding — or rather, hustling — us to make it happen. Looking back, we are grateful for your persistence, because those gatherings strengthened our bonds and created memories that we will cherish forever. You understood the importance of family unity and worked tirelessly to keep us connected.
-
-Mama Njambi, thank you for being our biggest fan and for championing our happiness. Thank you for celebrating our achievements, encouraging us through challenges, and always believing in us. Your love, warmth, and unwavering support left a lasting mark on all of us.
-
-Though your seat among us is now empty, your spirit, your laughter, and the memories we shared will remain alive in our hearts. We will miss your presence, your stories, your guidance, and your love. Thank you for everything you did for the Mwanikis. Your legacy of family, unity, and selfless love will continue to inspire us for generations to come. Rest in eternal peace, Mama Njambi. You will forever be loved, remembered, and deeply missed.',
-  false,
-  '2026-06-12 09:00:00+03'
+  '2026-06-15 17:40:00+03'
 ),
 (
-  'Brothers & Sisters',
-  'Today, as we gather to say goodbye, we choose not just to mourn but to celebrate you. You had a great impact in our lives in different ways, and we cherish the memories we created. We are so proud to be your siblings, but you have been snatched from our midst too soon. We wish we had more time together.
+  'Aunty Phyllis & Uncle Anthony',
+  'Sandra, words cannot fully express the emptiness you have left behind. To us, you were more than a niece; you were a daughter, a dear friend, and a cherished member of our home. You loved deeply and wholeheartedly, and whether one was ready to listen or not, you always spoke your mind with openness and honesty.
 
-Even when life got busy, the bond we shared never faded. We did not need constant contact to feel close. You were always there, offering your support and sharing life experiences together. Sometimes you were the peacemaker when we disagreed as siblings. After the demise of our mother, you became our second mum. Your generosity was of another level. We remember you as our family Chief Whip, organizing events and forcing many of us to attend. We don''t remember you getting angry at anything; you were easy at many times, even with the challenges of life — you lived each day at a time.
-
-You also supported your youngest siblings like your own children; we never worried that they were left young. How we wish you could have lived to tell us some of your early life secrets that you kept to your heart. Saying goodbye to you, our dear sister, feels impossible. The world feels void and confusing, but we will hold and cherish the memories we shared together that bring your presence into our lives forever.
-
-We shall love you today, tomorrow, and forever. Fare thee well, our dear sister, till we meet again. Rest in Eternal Peace.',
+She had a wonderful sense of humor and a beautiful imagination. In her own words she would say, "I will be a very good mother. I will have ten children, and my house will be very big, with eighty rooms." She loved singing and dancing, and she had a passion for bead craft, confidently selling her bracelets and necklaces without fear. We are confident that we shall meet again, because you loved the Lord. Till we meet again.',
   false,
-  '2026-06-12 10:00:00+03'
+  '2026-06-15 17:20:00+03'
 ),
 (
-  'Loise',
-  'They say you don''t choose your family, but you can choose your friends. God allowed me to choose Mary, and I would choose her again and again, forever. Mary was not just a friend; she was a sister by choice. Today, death feels so final, but for you, Mary, I know this is not the end.
+  'Joy Ng''etich',
+  'I will miss your weekly calls. There are days you would call at midnight and expect me to have capacity for full-on conversations; I''m glad I picked up many of those calls, even if it was to say I will call you tomorrow. You loved your family deeply. Our social glue. You loved babies and babies loved you back.
 
-The same Christ whom you served so faithfully has welcomed you into heaven. May the choirs of angels receive you. May the Son of God say to you, "Well done, my faithful servant; come to me and rest."
-
-Until we meet again in God''s presence, sleep well, my sister and friend.',
+Oh Sandra, your life is full of many lessons. You had a way of bouncing back to joy after an argument; you were quick to apologize, and you hated strife. What a gem you are! "But you are our letter, and you are in our hearts for everyone to read and understand" (2 Corinthians 3:2). You lived as a believer of Jesus ought to. Thank you for your authentic life. See you in heaven, Sandy.',
   false,
-  '2026-06-12 11:00:00+03'
+  '2026-06-15 17:00:00+03'
+),
+(
+  'Jessica & Jonathan',
+  'It was extremely difficult getting this news and being so far away. Sandy was the life of the party. She was the glue to the family, the one who kept everyone together and connected. One thing we''ll miss is how blunt Sandy was. It was very funny, but it was also real. The people in your life who can be honest with you truly love you. We feel Sandy truly loved all of us. May we carry Sandy''s beautiful energy along with us wherever we go.',
+  false,
+  '2026-06-15 16:40:00+03'
+),
+(
+  'Cousin Fridah',
+  'Sandra was jovial and very curious. She liked to visit us every December holiday. She was a grateful and humble girl. Sandra was also talented; she liked making beads and drawing pictures during her free time. She was passionate about everything she did. Lastly, she was very social and used to interact with everyone, both the young and older people. I will truly miss her. May she rest in eternal peace.',
+  false,
+  '2026-06-15 16:20:00+03'
+),
+(
+  'Ken & Peris Family',
+  'Sandra, you were a loving, caring, kind-hearted, and industrious gal. You brought so much joy and warmth to everyone around; you touched many lives through your humility, generosity, and genuine concern for others. Thank you for the beautiful necklaces and bangles. May your legacy of love, kindness, and strength continue to inspire us all. You will forever be remembered, loved, and missed. Rest in eternal peace, Cheptoo.',
+  false,
+  '2026-06-15 16:00:00+03'
+),
+(
+  'Aunty Nancy Mugun',
+  'Death doesn''t knock. Yours was unexpected. Not much I can say but accept. You were a source of joy and unity in the family. Always thought ahead and made sure things were running or going to work well. Your gifted hands made us beadwork we now live to cherish and reminisce about your times with us. Your grandparents loved you, and so did we. Rest well, Sandy.',
+  false,
+  '2026-06-15 15:40:00+03'
+),
+(
+  'Auntie Kui (Jane''s friend)',
+  'Sandy lived her life with warmth, kindness, and a quiet strength and joy that touched everyone around her. Her smile was a light straight from her heart, and her laughter and spirit truly set her apart.
+
+When she developed her love for cooking, she would send me so many pictures of the meals she prepared, always adding a chef''s touch to the presentation. She also loved sending me her dance videos set to praise music; the entire house was her studio. Though Sandy is no longer physically here, what she shared with all of us and the way she touched our lives will stay forever. May she rest peacefully in God''s loving care.',
+  false,
+  '2026-06-15 15:20:00+03'
+),
+(
+  'Nairobi Chapel Ngong Hills - Club Fusion',
+  'Today, we gather with heavy hearts as we remember and celebrate the life of our dear Sandra, a beloved member of Club Fusion, our teens and students'' church family. Sandra was more than just a member. She was a friend, a true worshipper, and a faithful servant of God.
+
+She served diligently in the worship team, and her commitment was evident in everything she did. She was always on time and never wanted to miss a service, practice, or gathering. Anyone who served alongside Sandra in worship knows how much she loved to sing; she always wanted the louder microphone. She sang with all her heart and gave her very best whenever she stood before God. One of Sandra''s greatest gifts was the way she loved people. She never missed an opportunity to greet someone, ask how they were doing, or offer a warm hug.',
+  false,
+  '2026-06-15 15:00:00+03'
+),
+(
+  'Pistis Christian School',
+  'Today we have come together to celebrate the life of Sandra Cheptoo, a friend and classmate whom we loved so much. Sandra was a joyful person whose laughter could brighten anyone''s day. Whenever she walked into a room, her confidence and positive energy made her stand out. She was never afraid to be herself and always spoke her mind with courage.
+
+Sandra got along well with others because she was kind, caring, and understanding. She knew how to make people feel welcome and was willing to forgive and help those around her. Her beautiful smile would always light up a room. She was passionate about learning and always worked hard, even when things were difficult, and never gave up easily.',
+  false,
+  '2026-06-15 14:40:00+03'
 );

@@ -62,7 +62,7 @@ export default function FloatingTributeButton() {
   return (
     <>
       <button onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-40 bg-gray-900 text-white rounded-full shadow-lg hover:bg-gray-800 transition-all hover:scale-105 flex items-center gap-2.5 px-5 py-3">
+        className="fixed bottom-6 right-6 z-40 bg-[#3f1f2c] text-white rounded-full shadow-lg hover:bg-[#56293b] transition-all hover:scale-105 flex items-center gap-2.5 px-5 py-3">
         <PenLine className="w-4 h-4" />
         <span className="font-medium text-sm tracking-wide">Add Tribute</span>
       </button>
@@ -72,10 +72,10 @@ export default function FloatingTributeButton() {
           <div className="fixed inset-0 bg-black/40 z-50 backdrop-blur-sm" onClick={() => !submitting && setIsOpen(false)} />
           <div className="fixed right-0 top-0 h-full w-full max-w-md bg-white shadow-2xl z-50 flex flex-col">
 
-            <div className="flex items-center justify-between px-7 py-5 border-b border-stone-100">
-              <h2 className="text-xl font-serif text-gray-900">Leave a Tribute</h2>
+            <div className="flex items-center justify-between px-7 py-5 border-b border-[#f1dde6]">
+              <h2 className="text-xl font-serif text-[#3f1f2c]">Leave a Tribute</h2>
               <button onClick={() => !submitting && setIsOpen(false)} disabled={submitting}
-                className="text-stone-400 hover:text-gray-700 disabled:opacity-50 transition-colors">
+                className="text-[#b98ba0] hover:text-[#6b4b56] disabled:opacity-50 transition-colors">
                 <X className="w-5 h-5" />
               </button>
             </div>
@@ -101,35 +101,35 @@ export default function FloatingTributeButton() {
                 {!form.isAnonymous && (
                   <div>
                     <label htmlFor="m-name" className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-2 font-sans">
-                      Your Name <span className="text-stone-400 font-normal normal-case tracking-normal">(required)</span>
+                      Your Name <span className="text-[#b98ba0] font-normal normal-case tracking-normal">(required)</span>
                     </label>
                     <input type="text" id="m-name" name="name" required={!form.isAnonymous} value={form.name} onChange={handleChange} disabled={!!user || submitting}
-                      className="w-full px-4 py-3 border border-stone-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-gray-400 disabled:bg-stone-50 font-sans text-gray-900 text-sm transition-colors"
+                      className="w-full px-4 py-3 border border-[#e8cdd9] rounded-sm focus:outline-none focus:ring-1 focus:ring-[#cf9bb2] focus:border-[#cf9bb2] disabled:bg-[#fbf2f6] font-sans text-[#3f1f2c] text-sm transition-colors"
                       placeholder="Enter your name" />
                   </div>
                 )}
 
                 <div>
                   <label htmlFor="m-msg" className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-2 font-sans">
-                    Your Tribute <span className="text-stone-400 font-normal normal-case tracking-normal">(required)</span>
+                    Your Tribute <span className="text-[#b98ba0] font-normal normal-case tracking-normal">(required)</span>
                   </label>
                   <textarea id="m-msg" name="message" required rows={7} value={form.message} onChange={handleChange} disabled={submitting}
-                    className="w-full px-4 py-3 border border-stone-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-gray-400 resize-none font-sans text-gray-900 text-sm leading-relaxed transition-colors"
+                    className="w-full px-4 py-3 border border-[#e8cdd9] rounded-sm focus:outline-none focus:ring-1 focus:ring-[#cf9bb2] focus:border-[#cf9bb2] resize-none font-sans text-[#3f1f2c] text-sm leading-relaxed transition-colors"
                     placeholder="Share your memories, thoughts, or condolences&hellip;" />
-                  <p className="mt-1 text-xs text-stone-400 font-sans text-right">{form.message.length} / 5000</p>
+                  <p className="mt-1 text-xs text-[#b98ba0] font-sans text-right">{form.message.length} / 5000</p>
                 </div>
 
-                <div className="flex items-start gap-3 p-4 bg-stone-50 rounded-sm border border-stone-100">
+                <div className="flex items-start gap-3 p-4 bg-[#fbf2f6] rounded-sm border border-[#f1dde6]">
                   <input type="checkbox" id="m-anon" name="isAnonymous" checked={form.isAnonymous} onChange={handleChange}
-                    className="mt-0.5 w-4 h-4 text-gray-700 border-stone-300 rounded" />
+                    className="mt-0.5 w-4 h-4 text-gray-700 border-[#dca7bf] rounded" />
                   <label htmlFor="m-anon" className="flex-1 text-sm text-gray-700 font-sans cursor-pointer">
                     <span className="font-medium">Publish anonymously</span>
-                    <span className="block mt-0.5 text-stone-400 text-xs">Your name will not be shown.</span>
+                    <span className="block mt-0.5 text-[#b98ba0] text-xs">Your name will not be shown.</span>
                   </label>
                 </div>
 
                 <button type="submit" disabled={submitting || !form.message.trim() || (!form.isAnonymous && !form.name.trim())}
-                  className="w-full py-3.5 px-6 bg-gray-900 text-white rounded-sm font-medium text-sm tracking-wide hover:bg-gray-800 transition-colors disabled:opacity-50 flex items-center justify-center gap-2">
+                  className="w-full py-3.5 px-6 bg-[#3f1f2c] text-white rounded-sm font-medium text-sm tracking-wide hover:bg-[#56293b] transition-colors disabled:opacity-50 flex items-center justify-center gap-2">
                   {submitting ? (
                     <>
                       <Loader2 className="w-4 h-4 animate-spin" />

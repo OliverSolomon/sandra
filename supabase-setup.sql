@@ -30,7 +30,16 @@ create policy "Anyone can insert gallery images" on public.gallery_images for in
 -- 3. Storage bucket
 -- Go to: Supabase Dashboard → Storage → New bucket
 -- Name: gallery-photos  |  Public bucket: YES
--- Then run this insert policy:
--- create policy "Anyone can upload gallery photos"
---   on storage.objects for insert
---   with check (bucket_id = 'gallery-photos');
+--
+-- Then run the storage policies below so visitors can upload and view photos.
+-- Without these, uploads fail with: "new row violates row-level security policy" (403).
+
+-- Allow anyone to upload into the gallery-photos bucket.
+create policy "Anyone can upload gallery photos"
+  on storage.objects for insert to public
+  with check (bucket_id = 'gallery-photos');
+
+-- Allow anyone to read objects in the gallery-photos bucket.
+create policy "Public read gallery photos"
+  on storage.objects for select to public
+  using (bucket_id = 'gallery-photos');

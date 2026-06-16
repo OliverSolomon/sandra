@@ -28,7 +28,15 @@ export async function POST(request: NextRequest) {
 
     if (uploadError) {
       console.error("Upload error:", uploadError);
-      return NextResponse.json({ error: "Failed to upload file" }, { status: 500 });
+      const isRls = /row-level security|policy/i.test(uploadError.message);
+      return NextResponse.json(
+        {
+          error: isRls
+            ? "Storage permissions are not set up. Run the gallery-photos storage policies in supabase-setup.sql."
+            : `Upload failed: ${uploadError.message}`,
+        },
+        { status: 500 }
+      );
     }
 
     const { data: urlData } = supabase.storage.from("gallery-photos").getPublicUrl(fileName);
